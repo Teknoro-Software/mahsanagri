@@ -1,26 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ================================
+   TAILWIND THEME (v4)
+   ================================ */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  /* Colors (LIGHT ONLY) */
+  --color-background: #ffffff;
+  --color-foreground: #1f2937;
+
+  --color-brand-light: #e8f5e9;
+  --color-brand: #2e7d32;
+  --color-brand-dark: #1b5e20;
+  --color-brand-accent: #66bb6a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ================================
+   TYPOGRAPHY
+   ================================ */
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+}
+
+/* ================================
+   GLOBAL STYLES
+   ================================ */
+html,
+body {
+  height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================================
+   INTERACTIONS
+   ================================ */
+button {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.bg-texture {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(46, 125, 50, 0.06) 1px, transparent 0);
+  background-size: 28px 28px;
 }
