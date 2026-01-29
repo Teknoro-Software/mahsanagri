@@ -6,11 +6,12 @@ import Stats from "@/components/landing/Stats";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
 import LeafDivider from "@/components/LeafDivider";
+import Pricing from "@/components/landing/Pricing";
 
 export default function Home() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
 
       <Hero />
 
@@ -24,11 +25,13 @@ export default function Home() {
 
       <LeafDivider />
 
-      <Stats />
+      {/* <Stats /> */}
 
+      <Pricing />
       <LeafDivider flip />
 
       <CTA />
+      {/* <LeafDivider flip /> */}
 
       <Footer />
 
