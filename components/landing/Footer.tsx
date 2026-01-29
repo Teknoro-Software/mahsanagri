@@ -20,14 +20,14 @@ export default function Footer() {
                         <div>
                             <p className="text-white/60">Phone</p>
                             <p className="mt-2 font-medium text-white">
-                                +91 9XXXXXXXXX
+                                +91 8848911369
                             </p>
                         </div>
 
                         <div>
                             <p className="text-white/60">Email</p>
                             <p className="mt-2 font-medium text-white">
-                                contact@mahsanagri.com
+                                mahsanagri@gmail.com
                             </p>
                         </div>
 
