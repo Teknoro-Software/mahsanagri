@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="max-w-6xl mx-auto px-6 py-10">
                 {/* Top section */}
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10">
-                    {/* Brand */}
+                    
                     <div>
                         <Image
                             src="/logo.png"
@@ -22,7 +22,6 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    {/* Contact info */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm mt-15">
                         <div>
                             <p className="text-black/60">Phone</p>
