@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function CTA() {
     return (
-        <section className="py-36 bg-brand-light bg-texture">
+        <section id="cta" className="py-36 bg-brand-light bg-texture">
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

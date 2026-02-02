@@ -25,13 +25,14 @@ export default function Home() {
 
       <LeafDivider />
 
-      {/* <Stats /> */}
+      <Stats />
 
-      <Pricing />
+      {/* <Pricing /> */}
       <LeafDivider flip />
 
       <CTA />
       {/* <LeafDivider flip /> */}
+      <div className="h-px bg-brand/30 " />
 
       <Footer />
 

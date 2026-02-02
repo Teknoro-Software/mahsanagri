@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 
 export default function Navbar() {
     const { scrollY } = useScroll();
@@ -36,19 +37,26 @@ export default function Navbar() {
             >
                 <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
                     {/* Brand */}
-                    <motion.span
-                        style={{ color: textColor }}
-                        className="text-xl font-semibold tracking-tight"
+                    <motion.div
+                        style={{ color: textColor }} // keeps scroll logic intact (for filters if needed)
+                        className="flex items-center gap-2"
                     >
-                        Mahsanagri
-                    </motion.span>
+                        <Image
+                            src="/logo.png" // put logo in /public
+                            alt="Mahsanagri logo"
+                            width={80}
+                            height={36}
+                            priority
+                            className="object-contain"
+                        />
+                    </motion.div>
 
                     {/* Navigation */}
                     <nav className="hidden md:flex items-center gap-10 text-sm font-medium">
                         {[
                             { href: "#about", label: "About" },
                             { href: "#features", label: "Solutions" },
-                            { href: "#contact", label: "Contact" },
+                            { href: "#cta", label: "Contact" },
                         ].map((item) => (
                             <motion.a
                                 key={item.href}
@@ -65,7 +73,8 @@ export default function Navbar() {
                     </nav>
 
                     {/* CTA */}
-                    <motion.button
+                    <motion.a
+                        href="#pricing"
                         style={{
                             backgroundColor: useTransform(
                                 scrollY,
@@ -77,7 +86,7 @@ export default function Navbar() {
                         className="hidden md:block px-6 py-2.5 rounded-xl text-sm font-semibold hover:scale-105 transition"
                     >
                         Get Started
-                    </motion.button>
+                    </motion.a>
                 </div>
             </motion.div>
         </header>
